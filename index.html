@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+
+    <title>Restaurant Ordering App</title>
+  </head>
+  <body>
+    <header class="header">
+      <img src="./images/restaurant.jpg" alt="pizza" class="header-img" />
+    </header>
+
+    <main class="main">
+      <section id="menu" class="menu">
+        <!-- *menu rendered here  -->
+      </section>
+
+      <section id="order-container" class="order-container hidden">
+        <h3 class="order-title">Your Order</h3>
+        <div id="orders" class="hidden">
+          <!-- *cart rendered here-->
+        </div>
+        <div class="total-price">
+          <p class="order-name">Total price:</p>
+          <p class="order-price" id="order-price">$$$</p>
+        </div>
+        <button class="complete-order-btn" id="complete-order-btn">
+          Complete order
+        </button>
+      </section>
+
+      <section id="payment-modal" class="payment-modal hidden">
+        <div class="btn-container">
+          <button class="close-btn" id="close-btn">X</button>
+        </div>
+        <div class="inner-payment-modal">
+          <h2>Enter your details</h2>
+          <form id="form">
+            <input
+              type="text"
+              id="customer-name"
+              name="customer-name"
+              placeholder="Enter your name"
+              aria-label="customer-name"
+              required
+            />
+            <textarea
+              placeholder="Enter address"
+              required>
+            </textarea>
+            <input
+              type="number"
+              id="cvv"
+              name="cvv"
+              placeholder="Enter phone"
+              aria-label="cvv"
+              required
+            />
+            <button type="submit" class="order-btn">Order</button>
+          </form>
+        </div>
+      </section>
+
+      <section class="thank-you-msg hidden" id="thank-you-msg"></section>
+    </main>
+  </body>
+
+  <script src="index.js" type="module"></script>
+</html>
